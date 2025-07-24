@@ -1,0 +1,36 @@
+[project]
+name = "devpulse-client"
+version = "0.1.0"
+description = "Client DevPulse"
+readme = "README.md"
+authors = [
+    { name = "Yaman Yucel", email = "yamanyucel0@gmail.com" }
+]
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "getmac>=0.9.5",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.10.1",
+    "typer>=0.16.0",
+]
+
+[project.scripts]
+devpulse-client = "devpulse_client.cli.commands:app"
+
+# [tool.hatch.build.targets.wheel]
+# packages = ["devpulse_client"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "loguru>=0.7.3",
+]
