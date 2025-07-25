@@ -3,8 +3,8 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-from pydantic import BaseSettings, Field
-
+from pydantic import Field
+from pydantic_settings import BaseSettings
 
 class TrackerSettings(BaseSettings):
     """Settings controlling the behaviour of the activity tracker client."""

@@ -10,20 +10,20 @@ from devpulse_client.config.tracker_config import tracker_settings
 from devpulse_client.tables.activity_table import ActivityEventType
 
 
-@dataclass(slots=True)
+@dataclass()
 class _ActivityEvent:
     username: str
     timestamp: datetime
     event: str
 
 
-@dataclass(slots=True)
+@dataclass()
 class _HeartbeatEvent:
     username: str
     timestamp: datetime
 
 
-@dataclass(slots=True)
+@dataclass()
 class _WindowEvent:
     username: str
     timestamp: datetime
@@ -36,19 +36,18 @@ class _WindowEvent:
 
 class EventStore:
     
-    _events: Deque[Dict[str, Any]] = deque() 
+    _events: Deque[_ActivityEvent | _HeartbeatEvent | _WindowEvent] = deque() 
     
 
     @staticmethod
-    
     def _push(event_obj: object) -> None:  # noqa: D401 – simple helper
-        """Serialise *event_obj* to a dict and push it onto the queue."""
+       
         EventStore._events.append(asdict(event_obj))
         
 
     @staticmethod
     def log_activity(label: str, timestamp: datetime | None = None) -> None:  # noqa: D401
-        """Record an *Activity* event in the queue."""
+        
         ts = timestamp or datetime.now()
 
         EventStore._push(
@@ -62,13 +61,7 @@ class EventStore:
        
     @staticmethod
     def heartbeat(timestamp: datetime | None = None) -> None:
-        """Write a HeartbeatEvent row.
-
-        The optional *timestamp* argument allows callers to record a specific
-        time rather than the moment this function is invoked. If *timestamp*
-        is *None*, the current time (``datetime.now()``) is used for backward
-        compatibility.
-        """
+        
         ts = timestamp or datetime.now()
         EventStore._push(
             _HeartbeatEvent(
@@ -85,11 +78,7 @@ class EventStore:
         start_time: datetime | None = None,
         end_time: datetime | None = None,
     ) -> None:  # noqa: D401
-        """Record a *Window* event in the queue.
-
-        This keeps the signature identical to the previous DB implementation so that
-        existing call-sites remain unchanged.
-        """
+        
         
         # Determine the actual start and end times to use
         if start_time is not None and end_time is not None:
@@ -120,10 +109,11 @@ class EventStore:
     # ------------------------------------------------------------------
     @staticmethod
     def get_all_events() -> List[Dict[str, Any]]:
-        """Return a *copy* of all events currently in the queue."""
+        
         return list(EventStore._events)
 
     @staticmethod
     def clear() -> None:
-        """Remove all events from the queue (mainly for testing)."""
+        
+        print("Clearing all events from the event store")
         EventStore._events.clear()

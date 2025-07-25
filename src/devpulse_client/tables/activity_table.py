@@ -1,4 +1,3 @@
-from datetime import datetime
 from enum import StrEnum
 
 class ActivityEventType(StrEnum):
@@ -10,4 +9,5 @@ class ActivityEventType(StrEnum):
     INACTIVE = "User Inactive"
     UNSUPPORTED = "Unsupported Platform"
     SHUTDOWN = "System Shutdown"
+    USER_INTERRUPT = "User Interrupt"
 
