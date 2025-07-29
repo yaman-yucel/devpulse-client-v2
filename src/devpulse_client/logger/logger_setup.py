@@ -6,7 +6,7 @@ from loguru import logger
 
 
 def setup_logging() -> None:
-    """Setup advanced logging with file, backtrace, rotation, and diagnostics."""
+    
 
     logs_dir = Path("logs")
     logs_dir.mkdir(parents=True, exist_ok=True)

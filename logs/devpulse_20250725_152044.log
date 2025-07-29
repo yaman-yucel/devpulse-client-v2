@@ -1,0 +1,62 @@
+2025-07-25 15:20:44 | INFO     | devpulse_client.app.app:__init__:49 - Initialized DevPulse client for server: http://localhost:8000
+2025-07-25 15:20:44 | INFO     | devpulse_client.app.app:start:76 - Validating credentials with server...
+2025-07-25 15:20:44 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:20 - Collecting device fingerprint
+2025-07-25 15:20:44 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:23 - Collecting device fingerprint: 18:60:24:92:da:75
+2025-07-25 15:20:44 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:26 - Collecting device fingerprint: OKEY
+2025-07-25 15:20:44 | DEBUG    | devpulse_client.auth.collectors.device_collector:collect_fingerprint:29 - Collected device fingerprint: MAC=18:60:24:92:da:75
+2025-07-25 15:20:44 | INFO     | devpulse_client.auth.client.auth_client:_send_login_request:144 - Credential validation successful: {'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ5YW1hbiIsImRldmljZV9tYWMiOiIxODo2MDoyNDo5MjpkYTo3NSJ9.Tpu5dPrmlxNTPDWFGQzhKpsOGf-H2KHv7WlZTQ0a3KI', 'token_type': 'bearer', 'expires': False}
+2025-07-25 15:20:44 | INFO     | devpulse_client.app.app:start:83 - ✅ Access token recieved.
+2025-07-25 15:20:45 | INFO     | devpulse_client.ingest.client.event_client:run:32 - Starting activity tracker
+2025-07-25 15:20:45 | INFO     | devpulse_client.ingest.client.event_client:run:42 - Logging activity: System Started
+2025-07-25 15:20:45 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'app.py - devpulse-client-v2 - Visual Studio Code'
+2025-07-25 15:20:45 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:74 - Logging activity: User Active
+2025-07-25 15:20:50 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:20:55 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:00 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:05 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:10 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:15 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:17 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'app.py - devpulse-client-v2 - Visual Studio Code' met duration threshold | Start: 2025-07-25T15:20:45.030716 | End: 2025-07-25T15:21:17.387438 | Duration: 32.4s (>= 0s threshold)
+2025-07-25 15:21:17 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'app.py - devpulse-client-v2 - Visual Studio Code' | Start: 2025-07-25T15:20:45.030716 | End: 2025-07-25T15:21:17.387438 | Duration: 32.4s
+2025-07-25 15:21:17 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'Settings Management - Pydantic — Mozilla Firefox'
+2025-07-25 15:21:18 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'Settings Management - Pydantic — Mozilla Firefox' met duration threshold | Start: 2025-07-25T15:21:17.387438 | End: 2025-07-25T15:21:18.842504 | Duration: 1.5s (>= 0s threshold)
+2025-07-25 15:21:18 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'Settings Management - Pydantic — Mozilla Firefox' | Start: 2025-07-25T15:21:17.387438 | End: 2025-07-25T15:21:18.842504 | Duration: 1.5s
+2025-07-25 15:21:18 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'Mozilla Firefox'
+2025-07-25 15:21:20 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:21 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'Mozilla Firefox' met duration threshold | Start: 2025-07-25T15:21:18.842504 | End: 2025-07-25T15:21:21.029435 | Duration: 2.2s (>= 0s threshold)
+2025-07-25 15:21:21 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'Mozilla Firefox' | Start: 2025-07-25T15:21:18.842504 | End: 2025-07-25T15:21:21.029435 | Duration: 2.2s
+2025-07-25 15:21:21 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: '404 not found - Google'da Ara — Mozilla Firefox'
+2025-07-25 15:21:25 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:28 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window '404 not found - Google'da Ara — Mozilla Firefox' met duration threshold | Start: 2025-07-25T15:21:21.029435 | End: 2025-07-25T15:21:28.839021 | Duration: 7.8s (>= 0s threshold)
+2025-07-25 15:21:28 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for '404 not found - Google'da Ara — Mozilla Firefox' | Start: 2025-07-25T15:21:21.029435 | End: 2025-07-25T15:21:28.839021 | Duration: 7.8s
+2025-07-25 15:21:28 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'Mozilla Firefox'
+2025-07-25 15:21:30 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:35 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:40 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:41 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'Mozilla Firefox' met duration threshold | Start: 2025-07-25T15:21:28.839021 | End: 2025-07-25T15:21:41.544737 | Duration: 12.7s (>= 0s threshold)
+2025-07-25 15:21:41 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'Mozilla Firefox' | Start: 2025-07-25T15:21:28.839021 | End: 2025-07-25T15:21:41.544737 | Duration: 12.7s
+2025-07-25 15:21:41 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'app.py - devpulse-client-v2 - Visual Studio Code'
+2025-07-25 15:21:41 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'app.py - devpulse-client-v2 - Visual Studio Code' met duration threshold | Start: 2025-07-25T15:21:41.544737 | End: 2025-07-25T15:21:41.805182 | Duration: 0.3s (>= 0s threshold)
+2025-07-25 15:21:41 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'app.py - devpulse-client-v2 - Visual Studio Code' | Start: 2025-07-25T15:21:41.544737 | End: 2025-07-25T15:21:41.805182 | Duration: 0.3s
+2025-07-25 15:21:41 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'event_client.py - devpulse-client-v2 - Visual Studio Code'
+2025-07-25 15:21:45 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:50 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:21:55 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:22:01 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:22:02 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'event_client.py - devpulse-client-v2 - Visual Studio Code' met duration threshold | Start: 2025-07-25T15:21:41.805182 | End: 2025-07-25T15:22:02.385492 | Duration: 20.6s (>= 0s threshold)
+2025-07-25 15:22:02 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'event_client.py - devpulse-client-v2 - Visual Studio Code' | Start: 2025-07-25T15:21:41.805182 | End: 2025-07-25T15:22:02.385492 | Duration: 20.6s
+2025-07-25 15:22:02 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'Mozilla Firefox'
+2025-07-25 15:22:05 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'Mozilla Firefox' met duration threshold | Start: 2025-07-25T15:22:02.385492 | End: 2025-07-25T15:22:05.875005 | Duration: 3.5s (>= 0s threshold)
+2025-07-25 15:22:05 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'Mozilla Firefox' | Start: 2025-07-25T15:22:02.385492 | End: 2025-07-25T15:22:05.875005 | Duration: 3.5s
+2025-07-25 15:22:05 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'event_client.py - devpulse-client-v2 - Visual Studio Code'
+2025-07-25 15:22:06 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:84 - Failed to send events: 404 {"detail":"Not Found"}
+2025-07-25 15:22:06 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'event_client.py - devpulse-client-v2 - Visual Studio Code' met duration threshold | Start: 2025-07-25T15:22:05.875005 | End: 2025-07-25T15:22:06.868614 | Duration: 1.0s (>= 0s threshold)
+2025-07-25 15:22:06 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'event_client.py - devpulse-client-v2 - Visual Studio Code' | Start: 2025-07-25T15:22:05.875005 | End: 2025-07-25T15:22:06.868614 | Duration: 1.0s
+2025-07-25 15:22:06 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: '● router.py - devpulse-server - Visual Studio Code'
+2025-07-25 15:22:11 | ERROR    | devpulse_client.ingest.client.event_client:_send_events:88 - Error sending events: [Errno 111] Connection refused
+2025-07-25 15:22:11 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window '● router.py - devpulse-server - Visual Studio Code' met duration threshold | Start: 2025-07-25T15:22:06.868614 | End: 2025-07-25T15:22:11.224482 | Duration: 4.4s (>= 0s threshold)
+2025-07-25 15:22:11 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for '● router.py - devpulse-server - Visual Studio Code' | Start: 2025-07-25T15:22:06.868614 | End: 2025-07-25T15:22:11.224482 | Duration: 4.4s
+2025-07-25 15:22:11 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'event_client.py - devpulse-client-v2 - Visual Studio Code'
+2025-07-25 15:22:12 | INFO     | devpulse_client.ingest.client.event_client:run:62 - Logging activity: System Stopped
+2025-07-25 15:22:12 | INFO     | devpulse_client.app.app:start:100 - Received interrupt, shutting down
+2025-07-25 15:22:12 | ERROR    | devpulse_client.cli.commands:run:48 - ❌ Failed to start client
