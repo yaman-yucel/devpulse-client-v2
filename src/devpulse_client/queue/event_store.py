@@ -53,16 +53,27 @@ class _CaptchaAnsweredEvent:
 
 
 @dataclass()
-class _CaptchaCancelledEvent:
+class _CaptchaNotAnsweredEvent:
     username: str
     timestamp: datetime
     event: str
     expression: str
     correct_answer: int
 
+@dataclass()
+class _WrongCaptchaAnswerEvent:
+    username: str
+    timestamp: datetime
+    event: str
+    expression: str
+    user_answer: int
+    correct_answer: int
+
+
+
 class EventStore:
     
-    _events: Deque[_ActivityEvent | _HeartbeatEvent | _WindowEvent | _CaptchaCreatedEvent | _CaptchaAnsweredEvent | _CaptchaCancelledEvent] = deque() 
+    _events: Deque[_ActivityEvent | _HeartbeatEvent | _WindowEvent | _CaptchaCreatedEvent | _CaptchaAnsweredEvent | _CaptchaNotAnsweredEvent | _WrongCaptchaAnswerEvent] = deque() 
     
 
     @staticmethod
@@ -160,7 +171,33 @@ class EventStore:
             )
         )
 
-   
+    @staticmethod
+    def log_captcha_not_answered(expression: str, correct_answer: int, timestamp: datetime | None = None) -> None:
+        ts = timestamp or datetime.now()
+        EventStore._push(
+            _CaptchaNotAnsweredEvent(
+                username=tracker_settings.user,
+                timestamp=ts,
+                event="captcha_not_answered",
+                expression=expression,
+                correct_answer=correct_answer,
+            )
+        )
+
+    @staticmethod
+    def log_wrong_captcha_answer(expression: str, user_answer: int, correct_answer: int, timestamp: datetime | None = None) -> None:
+        ts = timestamp or datetime.now()
+        EventStore._push(
+            _WrongCaptchaAnswerEvent(
+                username=tracker_settings.user,
+                timestamp=ts,
+                event="wrong_captcha_answer",
+                expression=expression,
+                user_answer=user_answer,
+                correct_answer=correct_answer,
+            )
+        )
+
     @staticmethod
     def get_all_events() -> List[Dict[str, Any]]:
         
