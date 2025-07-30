@@ -3,7 +3,7 @@ from devpulse_client.queue.event_store import EventStore
 from .heartbeat import HeartbeatTask
 from .screenshot_tracker import ScreenshotCapturer, ScreenshotTask
 from .window_tracker import WindowTitleProvider, WindowTrackerTask
-from .captcha import CaptchaTask
+
 __all__ = [
     "EventStore",
     "HeartbeatTask",
@@ -14,5 +14,5 @@ __all__ = [
     "ActivityStateTask",
     "IdleDetector",
     "ScreenLockDetector",
-    "CaptchaTask",
+    
 ]
