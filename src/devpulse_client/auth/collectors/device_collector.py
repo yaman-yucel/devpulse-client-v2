@@ -2,7 +2,6 @@
 
 import platform
 import subprocess
-import uuid
 from typing import Optional
 
 from getmac import get_mac_address
