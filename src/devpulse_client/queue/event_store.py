@@ -32,11 +32,37 @@ class _WindowEvent:
     start_time: datetime
     end_time: datetime | None
 
+@dataclass()
+class _CaptchaCreatedEvent:
+    username: str
+    timestamp: datetime
+    event: str
+    expression: str
+    correct_answer: int
 
+
+@dataclass()
+class _CaptchaAnsweredEvent:
+    username: str
+    timestamp: datetime
+    event: str
+    expression: str
+    user_answer: int
+    correct_answer: int
+    is_correct: bool
+
+
+@dataclass()
+class _CaptchaCancelledEvent:
+    username: str
+    timestamp: datetime
+    event: str
+    expression: str
+    correct_answer: int
 
 class EventStore:
     
-    _events: Deque[_ActivityEvent | _HeartbeatEvent | _WindowEvent] = deque() 
+    _events: Deque[_ActivityEvent | _HeartbeatEvent | _WindowEvent | _CaptchaCreatedEvent | _CaptchaAnsweredEvent | _CaptchaCancelledEvent] = deque() 
     
 
     @staticmethod
@@ -80,15 +106,15 @@ class EventStore:
     ) -> None:  # noqa: D401
         
         
-        # Determine the actual start and end times to use
+        
         if start_time is not None and end_time is not None:
             actual_start_time = start_time
             actual_end_time = end_time
             actual_duration = (end_time - start_time).total_seconds()
-            # Use start_time for timestamp field for consistency
+            
             ts = start_time
         else:
-            # Fall back to legacy parameters
+            
             ts = timestamp or datetime.now()
             actual_start_time = ts
             actual_end_time = ts + timedelta(seconds=duration) if duration > 0 else None
@@ -104,9 +130,37 @@ class EventStore:
                 end_time=actual_end_time,
             )
         )
-     # ------------------------------------------------------------------
-    # Convenience helpers
-    # ------------------------------------------------------------------
+    @staticmethod
+    def log_captcha_created(expression: str, correct_answer: int, timestamp: datetime | None = None) -> None:
+        """Log a captcha creation event."""
+        ts = timestamp or datetime.now()
+        EventStore._push(
+            _CaptchaCreatedEvent(
+                username=tracker_settings.user,
+                timestamp=ts,
+                event="captcha_created",
+                expression=expression,
+                correct_answer=correct_answer,
+            )
+        )
+
+    @staticmethod
+    def log_captcha_answered(expression: str, user_answer: int, correct_answer: int, is_correct: bool, timestamp: datetime | None = None) -> None:
+        """Log a captcha answer event."""
+        ts = timestamp or datetime.now()
+        EventStore._push(
+            _CaptchaAnsweredEvent(
+                username=tracker_settings.user,
+                timestamp=ts,
+                event="captcha_answered",
+                expression=expression,
+                user_answer=user_answer,
+                correct_answer=correct_answer,
+                is_correct=is_correct,
+            )
+        )
+
+   
     @staticmethod
     def get_all_events() -> List[Dict[str, Any]]:
         
