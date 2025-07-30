@@ -17,6 +17,7 @@ dependencies = [
     "loguru>=0.7.3",
     "mss>=10.0.0",
     "pillow>=11.3.0",
+    "psutil>=7.0.0",
     "pydantic>=2.11.7",
     "pydantic-settings>=2.10.1",
     "typer>=0.16.0",

@@ -8,7 +8,7 @@ from devpulse_client.config.tracker_config import tracker_settings
 
 
 class IdleDetector:
-    """Implementation relying on platform-specific utilities."""
+    
 
     @staticmethod
     def _seconds_idle_win32() -> float:

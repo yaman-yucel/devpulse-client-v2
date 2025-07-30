@@ -25,7 +25,9 @@ class ActivityTracker:
             HeartbeatTask(interval=tracker_settings.HEARTBEAT_EVERY),
             WindowTrackerTask(interval=tracker_settings.WINDOW_EVENT_INTERVAL),
             ActivityStateTask(),
+            
         ]
+        
         self.ingest_endpoint = "/api/ingest/events"
 
     def run(self) -> None:

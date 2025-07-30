@@ -8,7 +8,7 @@ import subprocess
 from devpulse_client.config.tracker_config import tracker_settings
 
 class ScreenLockDetector:
-    """Naïve cross-platform screen-lock detection."""
+    
 
     @staticmethod
     def _get_current_session_id() -> str | None:

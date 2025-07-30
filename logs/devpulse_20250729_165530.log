@@ -1,0 +1,49 @@
+2025-07-29 16:55:30 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:20 - Collecting device fingerprint
+2025-07-29 16:55:30 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:23 - Collecting device fingerprint: 18:60:24:92:da:75
+2025-07-29 16:55:30 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:26 - Collecting device fingerprint: OKEY
+2025-07-29 16:55:30 | DEBUG    | devpulse_client.auth.collectors.device_collector:collect_fingerprint:29 - Collected device fingerprint: MAC=18:60:24:92:da:75
+2025-07-29 16:55:31 | INFO     | devpulse_client.auth.client.auth_client:_send_login_request:144 - Credential validation successful: {'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYXJ1ayIsImRldmljZV9tYWMiOiIxODo2MDoyNDo5MjpkYTo3NSJ9.mdvGKPs6tdby8LCZ1GdpPUjIwZ7I28mBg07IeLUbcuc', 'token_type': 'bearer', 'expires': False}
+2025-07-29 16:55:31 | INFO     | devpulse_client.ingest.client.event_client:run:32 - Starting activity tracker
+2025-07-29 16:55:31 | INFO     | devpulse_client.ingest.client.event_client:run:40 - Logging activity: System Started
+2025-07-29 16:55:31 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'app.py - devpulse-client-v2 - Visual Studio Code'
+2025-07-29 16:55:31 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:74 - Logging activity: User Active
+2025-07-29 16:55:51 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:101 - Logging activity: User Inactive
+2025-07-29 16:55:59 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:106 - Logging activity: User Active
+2025-07-29 16:56:13 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'app.py - devpulse-client-v2 - Visual Studio Code' met duration threshold | Start: 2025-07-29T16:55:31.360911 | End: 2025-07-29T16:56:13.777967 | Duration: 42.4s (>= 0s threshold)
+2025-07-29 16:56:13 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'app.py - devpulse-client-v2 - Visual Studio Code' | Start: 2025-07-29T16:55:31.360911 | End: 2025-07-29T16:56:13.777967 | Duration: 42.4s
+2025-07-29 16:56:13 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'router.py - devpulse-server - Visual Studio Code'
+2025-07-29 16:56:29 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:101 - Logging activity: User Inactive
+2025-07-29 16:56:40 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:106 - Logging activity: User Active
+2025-07-29 16:56:43 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'router.py - devpulse-server - Visual Studio Code' met duration threshold | Start: 2025-07-29T16:56:13.777967 | End: 2025-07-29T16:56:43.138314 | Duration: 29.4s (>= 0s threshold)
+2025-07-29 16:56:43 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'router.py - devpulse-server - Visual Studio Code' | Start: 2025-07-29T16:56:13.777967 | End: 2025-07-29T16:56:43.138314 | Duration: 29.4s
+2025-07-29 16:56:43 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'credential.py - devpulse-server - Visual Studio Code'
+2025-07-29 16:56:55 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:101 - Logging activity: User Inactive
+2025-07-29 16:57:08 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:106 - Logging activity: User Active
+2025-07-29 16:57:25 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'credential.py - devpulse-server - Visual Studio Code' met duration threshold | Start: 2025-07-29T16:56:43.138314 | End: 2025-07-29T16:57:25.701005 | Duration: 42.6s (>= 0s threshold)
+2025-07-29 16:57:25 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'credential.py - devpulse-server - Visual Studio Code' | Start: 2025-07-29T16:56:43.138314 | End: 2025-07-29T16:57:25.701005 | Duration: 42.6s
+2025-07-29 16:57:25 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'connection.py - devpulse-server - Visual Studio Code'
+2025-07-29 16:58:02 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:101 - Logging activity: User Inactive
+2025-07-29 16:58:05 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:106 - Logging activity: User Active
+2025-07-29 16:58:41 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'connection.py - devpulse-server - Visual Studio Code' met duration threshold | Start: 2025-07-29T16:57:25.701005 | End: 2025-07-29T16:58:41.448839 | Duration: 75.7s (>= 0s threshold)
+2025-07-29 16:58:41 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'connection.py - devpulse-server - Visual Studio Code' | Start: 2025-07-29T16:57:25.701005 | End: 2025-07-29T16:58:41.448839 | Duration: 75.7s
+2025-07-29 16:58:41 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: '__init__.py - devpulse-server - Visual Studio Code'
+2025-07-29 16:58:42 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window '__init__.py - devpulse-server - Visual Studio Code' met duration threshold | Start: 2025-07-29T16:58:41.448839 | End: 2025-07-29T16:58:42.630823 | Duration: 1.2s (>= 0s threshold)
+2025-07-29 16:58:42 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for '__init__.py - devpulse-server - Visual Studio Code' | Start: 2025-07-29T16:58:41.448839 | End: 2025-07-29T16:58:42.630823 | Duration: 1.2s
+2025-07-29 16:58:42 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'router.py - devpulse-server - Visual Studio Code'
+2025-07-29 16:59:06 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'router.py - devpulse-server - Visual Studio Code' met duration threshold | Start: 2025-07-29T16:58:42.630823 | End: 2025-07-29T16:59:06.849881 | Duration: 24.2s (>= 0s threshold)
+2025-07-29 16:59:06 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'router.py - devpulse-server - Visual Studio Code' | Start: 2025-07-29T16:58:42.630823 | End: 2025-07-29T16:59:06.849881 | Duration: 24.2s
+2025-07-29 16:59:06 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'connection.py - devpulse-server - Visual Studio Code'
+2025-07-29 17:00:13 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:101 - Logging activity: User Inactive
+2025-07-29 17:00:17 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:106 - Logging activity: User Active
+2025-07-29 17:01:06 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:101 - Logging activity: User Inactive
+2025-07-29 17:33:08 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:106 - Logging activity: User Active
+2025-07-29 17:33:20 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:101 - Logging activity: User Inactive
+2025-07-29 17:42:10 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:106 - Logging activity: User Active
+2025-07-29 17:42:12 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'connection.py - devpulse-server - Visual Studio Code' met duration threshold | Start: 2025-07-29T16:59:06.849881 | End: 2025-07-29T17:42:12.487116 | Duration: 2585.6s (>= 0s threshold)
+2025-07-29 17:42:12 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'connection.py - devpulse-server - Visual Studio Code' | Start: 2025-07-29T16:59:06.849881 | End: 2025-07-29T17:42:12.487116 | Duration: 2585.6s
+2025-07-29 17:42:12 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'app.py - devpulse-client-v2 - Visual Studio Code'
+2025-07-29 17:42:12 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'app.py - devpulse-client-v2 - Visual Studio Code' met duration threshold | Start: 2025-07-29T17:42:12.487116 | End: 2025-07-29T17:42:12.684085 | Duration: 0.2s (>= 0s threshold)
+2025-07-29 17:42:12 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'app.py - devpulse-client-v2 - Visual Studio Code' | Start: 2025-07-29T17:42:12.487116 | End: 2025-07-29T17:42:12.684085 | Duration: 0.2s
+2025-07-29 17:42:12 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'connection.py - devpulse-server - Visual Studio Code'
+2025-07-29 17:42:12 | INFO     | devpulse_client.core.signal_handler.signal_handler:_handle_exit:54 - Received SIGHUP – starting graceful shutdown…
+2025-07-29 17:42:12 | INFO     | devpulse_client.ingest.client.event_client:run:59 - Logging activity: System Stopped

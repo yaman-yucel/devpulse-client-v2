@@ -1,0 +1,14 @@
+2025-07-30 10:35:10 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:20 - Collecting device fingerprint
+2025-07-30 10:35:10 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:23 - Collecting device fingerprint: 18:60:24:92:da:75
+2025-07-30 10:35:10 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:26 - Collecting device fingerprint: OKEY
+2025-07-30 10:35:10 | DEBUG    | devpulse_client.auth.collectors.device_collector:collect_fingerprint:29 - Collected device fingerprint: MAC=18:60:24:92:da:75
+2025-07-30 10:35:11 | INFO     | devpulse_client.auth.client.auth_client:_send_login_request:144 - Credential validation successful: {'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYXJ1ayIsImRldmljZV9tYWMiOiIxODo2MDoyNDo5MjpkYTo3NSJ9.mdvGKPs6tdby8LCZ1GdpPUjIwZ7I28mBg07IeLUbcuc', 'token_type': 'bearer', 'expires': False}
+2025-07-30 10:35:11 | INFO     | devpulse_client.ingest.client.event_client:run:34 - Starting activity tracker
+2025-07-30 10:35:11 | INFO     | devpulse_client.ingest.client.event_client:run:42 - Logging activity: System Started
+2025-07-30 10:35:11 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'captcha_task.py - devpulse-client-v2 - Visual Studio Code'
+2025-07-30 10:35:11 | INFO     | devpulse_client.core.activity_state_tracker.activity_state_task:tick:74 - Logging activity: User Active
+2025-07-30 10:35:11 | INFO     | devpulse_client.core.window_tracker.window_task:_log_previous_window_if_needed:51 - Window 'captcha_task.py - devpulse-client-v2 - Visual Studio Code' met duration threshold | Start: 2025-07-30T10:35:11.061492 | End: 2025-07-30T10:35:11.237021 | Duration: 0.2s (>= 0s threshold)
+2025-07-30 10:35:11 | INFO     | devpulse_client.core.window_tracker.window_task:_log_window_event:75 - Logging window event for 'captcha_task.py - devpulse-client-v2 - Visual Studio Code' | Start: 2025-07-30T10:35:11.061492 | End: 2025-07-30T10:35:11.237021 | Duration: 0.2s
+2025-07-30 10:35:11 | DEBUG    | devpulse_client.core.window_tracker.window_task:_start_tracking_new_window:68 - Started tracking window: 'Math Challenge'
+2025-07-30 10:35:21 | INFO     | devpulse_client.ingest.client.event_client:run:61 - Logging activity: System Stopped
+2025-07-30 10:35:21 | ERROR    | devpulse_client.app.app:start:46 - Failed to run tracker: 'CaptchaTask' object has no attribute '_task'
