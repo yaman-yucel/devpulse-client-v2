@@ -1,9 +1,0 @@
-2025-07-28 15:17:54 | INFO     | devpulse_client.auth.client.auth_client:signup:44 - OKEY
-2025-07-28 15:17:54 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:20 - Collecting device fingerprint
-2025-07-28 15:17:54 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:23 - Collecting device fingerprint: 18:60:24:92:da:75
-2025-07-28 15:17:54 | INFO     | devpulse_client.auth.collectors.device_collector:collect_fingerprint:26 - Collecting device fingerprint: OKEY
-2025-07-28 15:17:54 | DEBUG    | devpulse_client.auth.collectors.device_collector:collect_fingerprint:29 - Collected device fingerprint: MAC=18:60:24:92:da:75
-2025-07-28 15:17:54 | DEBUG    | devpulse_client.auth.collectors.device_collector:collect_fingerprint:44 - Collected device fingerprint: MAC=18:60:24:92:da:75, Serial=None, CPU=x86_64 (x86_64), Memory=31.24GB
-2025-07-28 15:17:54 | INFO     | devpulse_client.auth.client.auth_client:signup:59 - Enrolling device: sysadm-HP-ProDesk-400-G4-MT (linux) for user: faruk
-2025-07-28 15:17:54 | INFO     | devpulse_client.cli.commands:enroll:29 - ✅ Enrollment completed successfully!
-2025-07-28 15:17:54 | INFO     | devpulse_client.cli.commands:enroll:30 - You can now run the client with: devpulse-client run
