@@ -1,8 +1,3 @@
-"""Command-line interface for DevPulse client.
-
-This module provides CLI commands for enrollment and running the client.
-"""
-
 from __future__ import annotations
 
 import typer

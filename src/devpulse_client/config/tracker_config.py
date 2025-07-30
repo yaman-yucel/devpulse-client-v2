@@ -7,7 +7,7 @@ from pydantic import Field
 from pydantic_settings import BaseSettings
 
 class TrackerSettings(BaseSettings):
-    """Settings controlling the behaviour of the activity tracker client."""
+    
 
     IDLE_THRESHOLD: int = Field(10, description="seconds before user considered idle")
     HEARTBEAT_EVERY: int = Field(10, description="seconds between heartbeat writes")
@@ -16,7 +16,7 @@ class TrackerSettings(BaseSettings):
     IMAGE_QUALITY: int = Field(85, description="JPEG quality when IMAGE_FORMAT == 'jpeg'")
     WINDOW_EVENT_INTERVAL: int = Field(0, description="seconds a window must remain active before it is logged")
     SYSTEM_RUN_DELAY: float = Field(0.1, description="seconds to wait after running tasks again")
-    
+    LOCK_INTERVAL_SECONDS: int = Field(1200, description="seconds between automatic screen locks")
     # File logging settings
 
     LOG_TO_CONSOLE: bool = Field(True, description="Enable console logging")

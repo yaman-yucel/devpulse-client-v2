@@ -17,7 +17,7 @@ CleanupFn = Callable[[], None]
 
 
 class SignalHandler:
-    """Install exit-related signal handlers and coordinate graceful shutdown."""
+    
 
     def __init__(self,fns : list[CleanupFn] | None ) -> None:
         self._BASE_SIGNALS: list[int] = []
